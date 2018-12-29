@@ -1,6 +1,11 @@
 // This file is essentially a repository for quote information
 // It's sole purpose is to store the quotes array to make the code cleaner
 
+// This array stores all quote objects.
+// Each quote object has six properties: quote (which stores the quote),
+// source (the character which said the quote), citation (the media source),
+// year (the year the quote is from), mediaType (the type of media the source is),
+// and actor (the name of the actor who said the quote).
 var quotes = [
   {
     quote: "Don't tell me not to fly, I've simply got to!",

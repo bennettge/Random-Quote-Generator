@@ -11,11 +11,12 @@
   // This function first calls the printQuote function (To ensure that a quote
   // is displayed at the start of the webpage) and then calls the function again
   // after 20,000 milliseconds (20 seconds) have passed.
+  // Information on setInterval function provided by the Mozilla Developer Network
   function timerDelay() {
     printQuote();
     window.setInterval(printQuote, 20000);
   }
-  
+
   </script>
 </head>
 <body onload="timerDelay();" id="body">
