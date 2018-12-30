@@ -67,5 +67,14 @@ function printQuote() {
   document.getElementById('body').style.backgroundColor = randomColor;
 }
 
+// This function first calls the printQuote function (To ensure that a quote
+// is displayed at the start of the webpage) and then calls the function again
+// after 20,000 milliseconds (20 seconds) have passed.
+// Information on setInterval function provided by the Mozilla Developer Network
+function timerDelay() {
+  printQuote();
+  window.setInterval(printQuote, 20000);
+}
+
 // Given by treehouse template (told not to touch this!)
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
