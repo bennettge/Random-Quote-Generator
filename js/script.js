@@ -19,6 +19,8 @@ var backgroundColors = ["red", "orange", "black", "green", "blue", "purple"];
 
 // Sets variables used for outputting to HTML based on randomQuote object
 function setQuoteValues(randomQuote) {
+
+  // Sets values of variables based on the current quote
   quote = randomQuote.quote;
   source = randomQuote.source;
   citation = randomQuote.citation;
@@ -48,6 +50,8 @@ function getRandomQuote() {
 
 // Generates a string of HTML code based on generated information
 function generateHTML() {
+
+  // This creates an formatted string based on current variables
   var generatedHTML = '<p class="quote">' + quote + "</p>" + '<p class="source">' +
                       source + ' (' + actor + ')' + '<span class="citation">' +
                       citation + '(' + mediaType + ')' + '</span>' +
@@ -58,10 +62,16 @@ function generateHTML() {
 
 // Formats and styles information to display the quote in an HTML file
 function printQuote() {
+
+  // Gets a random quote and a random background color
   var randomQuote = getRandomQuote();
   var randomColor = getRandomColor();
+
+  // Resets variables to the values of the selected quote and generates a string of HTML
   setQuoteValues(randomQuote);
   outputToHTML = generateHTML();
+
+  // Edits information for a new output
   document.getElementById('quote-box').innerHTML = outputToHTML;
   document.getElementById('loadQuote').style.backgroundColor = randomColor;
   document.getElementById('body').style.backgroundColor = randomColor;
